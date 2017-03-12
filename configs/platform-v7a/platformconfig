@@ -141,7 +141,7 @@ PTXCONF_KERNEL_EXTRA_MAKEVARS=""
 PTXCONF_DTC=y
 PTXCONF_DTC_INSTALL_OFTREE=y
 PTXCONF_DTC_OFTREE_DTS_PATH="${KERNEL_DIR}/arch/${PTXCONF_KERNEL_ARCH_STRING}/boot/dts"
-PTXCONF_DTC_OFTREE_DTS="am335x-bone.dts am335x-boneblack.dts vexpress-v2p-ca9.dts bcm2836-rpi-2-b.dts imx6q-sabrelite.dts imx6sx-udoo-neo-full.dts imx6dl-riotboard.dts imx6q-nitrogen6x.dts"
+PTXCONF_DTC_OFTREE_DTS="am335x-bone.dts am335x-boneblack.dts vexpress-v2p-ca9.dts bcm2836-rpi-2-b.dts imx6q-sabrelite.dts imx6sx-udoo-neo-full.dts imx6dl-riotboard.dts imx6q-nitrogen6x.dts exynos5422-odroidxu4.dts"
 PTXCONF_DTC_KERNEL=y
 PTXCONF_DTC_EXTRA_ARGS=""
 
@@ -170,6 +170,7 @@ PTXCONF_BAREBOX_VEXPRESS=y
 PTXCONF_BAREBOX_ARCH_STRING="arm"
 # PTXCONF_BAREBOX is not set
 # PTXCONF_BAREBOX_MLO is not set
+PTXCONF_BOOTLOADER=y
 # PTXCONF_GRUB is not set
 # PTXCONF_HOST_MXS_UTILS is not set
 
@@ -177,7 +178,19 @@ PTXCONF_BAREBOX_ARCH_STRING="arm"
 # i.MX HAB                      
 #
 # PTXCONF_HOST_IMX_CST is not set
-# PTXCONF_U_BOOT is not set
+PTXCONF_U_BOOT=y
+PTXCONF_U_BOOT_VERSION="2018.09"
+PTXCONF_U_BOOT_MD5="f3a80a7d46e44a002fd332e49830e9e3"
+PTXCONF_U_BOOT_SERIES="series"
+PTXCONF_U_BOOT_CONFIG="odroid-xu3_defconfig"
+
+#
+# target install
+#
+# PTXCONF_U_BOOT_INSTALL_SREC is not set
+# PTXCONF_U_BOOT_INSTALL_ELF is not set
+# PTXCONF_U_BOOT_INSTALL_MLO is not set
+# PTXCONF_U_BOOT_INSTALL_U_BOOT_IMX is not set
 # PTXCONF_X_LOAD is not set
 
 #
