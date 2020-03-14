@@ -2,6 +2,7 @@
 
 menuconfig TF_A
 	select BOOTLOADER
+	select HOST_DTC
 	prompt "ARM Trusted Firmware-A        "
 	depends on ARCH_ARM || ARCH_ARM64
 	bool
