@@ -26,26 +26,6 @@ FIRMWARE_IMX_LICENSE	:= NXP-Software-License-Agreement
 FIRMWARE_IMX_LICENSE_FILES := \
 	file://COPYING;md5=44a8052c384584ba09077e85a3d1654f
 
-#
-# Firmware blobs for barebox
-#
-ifdef PTXCONF_FIRMWARE_IMX
-BAREBOX_INJECT_FILES	+= imx8mm-bl31.bin:firmware/imx8mm-bl31.bin
-BAREBOX_INJECT_FILES	+= imx8mn-bl31.bin:firmware/imx8mn-bl31.bin
-BAREBOX_INJECT_FILES	+= imx8mp-bl31.bin:firmware/imx8mp-bl31.bin
-BAREBOX_INJECT_FILES	+= imx8mq-bl31.bin:firmware/imx8mq-bl31.bin
-ifdef PTXCONF_FIRMWARE_IMX_BOOTIMAGE_IMX8
-BAREBOX_INJECT_FILES	+= ddr/synopsys/lpddr4_pmu_train_1d_dmem.bin:firmware/lpddr4_pmu_train_1d_dmem.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/lpddr4_pmu_train_1d_imem.bin:firmware/lpddr4_pmu_train_1d_imem.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/lpddr4_pmu_train_2d_dmem.bin:firmware/lpddr4_pmu_train_2d_dmem.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/lpddr4_pmu_train_2d_imem.bin:firmware/lpddr4_pmu_train_2d_imem.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/ddr4_dmem_1d.bin:firmware/ddr4_dmem_1d.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/ddr4_dmem_2d.bin:firmware/ddr4_dmem_2d.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/ddr4_imem_1d.bin:firmware/ddr4_imem_1d.bin
-BAREBOX_INJECT_FILES	+= ddr/synopsys/ddr4_imem_2d.bin:firmware/ddr4_imem_2d.bin
-endif
-endif
-
 # ----------------------------------------------------------------------------
 # Extract
 # ----------------------------------------------------------------------------

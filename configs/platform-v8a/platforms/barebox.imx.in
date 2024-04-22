@@ -1,0 +1,12 @@
+## SECTION=barebox_firmware
+
+config BAREBOX_NEEDS_FIRMWARE_IMX
+	bool
+	prompt "barebox needs firmware-imx"
+	help
+	  Select this if barebox needs the non-free IMX firmware blobs.
+
+config BAREBOX_DEPENDENCIES
+	tristate
+	select FIRMWARE_IMX if BAREBOX_NEEDS_FIRMWARE_IMX
+	select FIRMWARE_IMX_BOOTIMAGE_IMX8 if BAREBOX_NEEDS_FIRMWARE_IMX
