@@ -1,0 +1,14 @@
+## SECTION=barebox_firmware
+
+config BAREBOX_NEEDS_FIRMWARE_ROCKCHIP
+	bool
+	prompt "barebox needs firmware-rockchip"
+	help
+	  Select this if barebox needs the non-free Rockchip firmware blobs.
+
+config BAREBOX_DEPENDENCIES
+	tristate
+	select FIRMWARE_ROCKCHIP if BAREBOX_NEEDS_FIRMWARE_ROCKCHIP
+	select FIRMWARE_ROCKCHIP_RK3568_SDRAM if BAREBOX_NEEDS_FIRMWARE_ROCKCHIP
+	select FIRMWARE_ROCKCHIP_RK356x_BL31 if BAREBOX_NEEDS_FIRMWARE_ROCKCHIP
+	select FIRMWARE_ROCKCHIP_RK356x_BL32 if BAREBOX_NEEDS_FIRMWARE_ROCKCHIP
