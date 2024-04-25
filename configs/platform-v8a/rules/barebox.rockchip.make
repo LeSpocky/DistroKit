@@ -6,9 +6,6 @@
 # see the README file.
 #
 
-# TODO: remove this when it is added in PTXdist upstream
-BAREBOX_PROGS_HOST += rk-usb-loader
-
 #
 # Firmware blobs for barebox
 #
