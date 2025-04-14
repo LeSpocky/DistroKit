@@ -24,7 +24,7 @@ BAREBOX_VEXPRESS_SOURCE		:= $(SRCDIR)/$(BAREBOX_VEXPRESS_PATCHES).$(BAREBOX_VEXP
 BAREBOX_VEXPRESS_DIR		:= $(BUILDDIR)/$(BAREBOX_VEXPRESS)
 BAREBOX_VEXPRESS_BUILD_DIR	:= $(BAREBOX_VEXPRESS_DIR)-build
 BAREBOX_VEXPRESS_CONFIG		:= $(call ptx/in-platformconfigdir, barebox-vexpress.config)
-BAREBOX_VEXPRESS_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox.config)
+BAREBOX_VEXPRESS_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-common.config)
 BAREBOX_VEXPRESS_LICENSE	:= GPL-2.0-only
 BAREBOX_VEXPRESS_BUILD_OOT	:= KEEP
 

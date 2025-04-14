@@ -24,7 +24,7 @@ BAREBOX_RPI2_SOURCE	:= $(SRCDIR)/$(BAREBOX_RPI2_PATCHES).$(BAREBOX_RPI2_SUFFIX)
 BAREBOX_RPI2_DIR	:= $(BUILDDIR)/$(BAREBOX_RPI2)
 BAREBOX_RPI2_BUILD_DIR	:= $(BAREBOX_RPI2_DIR)-build
 BAREBOX_RPI2_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-rpi2.config)
-BAREBOX_RPI2_REF_CONFIG := $(call ptx/in-platformconfigdir, barebox.config)
+BAREBOX_RPI2_REF_CONFIG := $(call ptx/in-platformconfigdir, barebox-common.config)
 BAREBOX_RPI2_LICENSE	:= GPL-2.0-only
 BAREBOX_RPI2_BUILD_OOT	:= KEEP
 

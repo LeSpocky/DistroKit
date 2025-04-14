@@ -24,7 +24,7 @@ BAREBOX_AT91_SOURCE	:= $(SRCDIR)/$(BAREBOX_AT91_PATCHES).$(BAREBOX_AT91_SUFFIX)
 BAREBOX_AT91_DIR		:= $(BUILDDIR)/$(BAREBOX_AT91)
 BAREBOX_AT91_BUILD_DIR	:= $(BAREBOX_AT91_DIR)-build
 BAREBOX_AT91_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-at91.config)
-BAREBOX_AT91_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox.config)
+BAREBOX_AT91_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-common.config)
 BAREBOX_AT91_LICENSE	:= GPL-2.0-only
 BAREBOX_AT91_BUILD_OOT	:= KEEP
 

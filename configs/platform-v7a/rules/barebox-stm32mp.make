@@ -24,7 +24,7 @@ BAREBOX_STM32MP_SOURCE		:= $(SRCDIR)/$(BAREBOX_STM32MP_PATCHES).$(BAREBOX_STM32M
 BAREBOX_STM32MP_DIR		:= $(BUILDDIR)/$(BAREBOX_STM32MP)
 BAREBOX_STM32MP_BUILD_DIR	:= $(BAREBOX_STM32MP_DIR)-build
 BAREBOX_STM32MP_CONFIG		:= $(call ptx/in-platformconfigdir, barebox-stm32mp.config)
-BAREBOX_STM32MP_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox.config)
+BAREBOX_STM32MP_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-common.config)
 BAREBOX_STM32MP_LICENSE		:= GPL-2.0
 BAREBOX_STM32MP_BUILD_OOT	:= KEEP
 

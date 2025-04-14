@@ -24,7 +24,7 @@ BAREBOX_MX6_SOURCE	:= $(SRCDIR)/$(BAREBOX_MX6_PATCHES).$(BAREBOX_MX6_SUFFIX)
 BAREBOX_MX6_DIR		:= $(BUILDDIR)/$(BAREBOX_MX6)
 BAREBOX_MX6_BUILD_DIR	:= $(BAREBOX_MX6_DIR)-build
 BAREBOX_MX6_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-mx6.config)
-BAREBOX_MX6_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox.config)
+BAREBOX_MX6_REF_CONFIG	:= $(call ptx/in-platformconfigdir, barebox-common.config)
 BAREBOX_MX6_LICENSE	:= GPL-2.0-only
 BAREBOX_MX6_BUILD_OOT	:= KEEP
 
