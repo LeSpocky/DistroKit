@@ -60,8 +60,8 @@ barebox_gpt_support:
     first vfat partition. As the MLO
 
     As the am335x-mlo configuration's only function is to chainload
-    barebox, we only need GPT support later on in the second stage
-    barebox-am335x configuration.
+    barebox, we only need GPT support later on in the regular second stage
+    barebox configuration.
   variants:
     - condition: |
         kconfig.have_barebox_config() and

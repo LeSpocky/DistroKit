@@ -6,7 +6,6 @@ config IMAGE_GF
 	select HOST_DOSFSTOOLS
 	select HOST_MTOOLS
 	select IMAGE_ROOT_EXT
-	select BAREBOX_AM335X
 	select BAREBOX_AM335X_MLO
 	prompt "Generate images/gf.hdimg"
 	help

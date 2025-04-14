@@ -1,8 +1,0 @@
-## SECTION=bootloader
-
-config BAREBOX_AM335X
-	tristate
-	prompt "Barebox (am335x)"
-	select BAREBOX_COMMON
-	help
-	  Gute Fee support for barebox.
