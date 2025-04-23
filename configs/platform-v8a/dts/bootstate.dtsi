@@ -40,6 +40,27 @@
 
 #endif
 
+/** TQ-Systems i.MX93 TQMa93xxLA/TQMa93xxCA on MBa93xxCA starter kit **********/
+#ifdef imx93_tqma9352_mba93xxca_dts
+/ {
+	aliases {
+		state = &state_sd;
+	};
+
+	state_sd: state {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "barebox,state";
+		magic = <0xd46d4d28>;
+		backend = <&usdhc2>;   // via GPT Type UUID
+		backend-type = "raw";
+		backend-storage-type = "direct";
+		backend-stridesize = <0x40>;
+	};
+};
+
+#endif
+
 /** Generic bootstate node for all platforms **********************************/
 / {
 	state: state {

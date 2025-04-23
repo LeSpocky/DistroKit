@@ -137,7 +137,7 @@ PTXCONF_KERNEL_IMAGE_RAW=y
 PTXCONF_KERNEL_IMAGE="Image"
 PTXCONF_KERNEL_DTB=y
 PTXCONF_KERNEL_DTS_PATH="${PTXDIST_PLATFORMCONFIG_SUBDIR}/dts:${KERNEL_DIR}/arch/${GENERIC_KERNEL_ARCH}/boot/dts"
-PTXCONF_KERNEL_DTS="armada-3720-community.dts freescale/imx8mm-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mp-evk.dts freescale/imx8mq-evk.dts rockchip/rk3568-rock-3a.dts freescale/imx8mp-tqma8mpql-mba8mpxl.dts"
+PTXCONF_KERNEL_DTS="armada-3720-community.dts freescale/imx8mm-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mp-evk.dts freescale/imx8mq-evk.dts rockchip/rk3568-rock-3a.dts freescale/imx8mp-tqma8mpql-mba8mpxl.dts freescale/imx93-tqma9352-mba93xxca.dts"
 # PTXCONF_KERNEL_DTBO is not set
 # PTXCONF_KERNEL_CODE_SIGNING is not set
 # PTXCONF_KERNEL_ZSTD is not set
@@ -213,7 +213,7 @@ PTXCONF_TF_A_MD5="dea016f3707117c7935a8a26433a1e46 5b90a1c21210702e64234a2beb79f
 PTXCONF_TF_A_ARCH_STRING="aarch64"
 PTXCONF_TF_A_ARM_ARCH_MAJOR_8=y
 PTXCONF_TF_A_ARM_ARCH_MAJOR=8
-PTXCONF_TF_A_PLATFORMS="imx8mq imx8mm imx8mn imx8mp"
+PTXCONF_TF_A_PLATFORMS="imx8mq imx8mm imx8mn imx8mp imx93"
 PTXCONF_TF_A_ARM_ARCH_MINOR=0
 PTXCONF_TF_A_EXTRA_ARGS="IMX_BOOT_UART_BASE=auto"
 PTXCONF_TF_A_ARTIFACTS="bl31.bin"
@@ -291,6 +291,7 @@ PTXCONF_IMAGE_ROOT_TGZ_LABEL=""
 # PTXCONF_IMAGE_ROOT_UBI is not set
 # PTXCONF_IMAGE_ROOT_UBIFS is not set
 PTXCONF_IMAGE_TQ_MBA8MPXL=y
+PTXCONF_IMAGE_TQ_MBA93XXCA=y
 
 #
 # ipkg options                  

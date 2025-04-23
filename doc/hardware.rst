@@ -131,6 +131,7 @@ Currently, DistroKit supports the following hardware:
 
    hardware_v8a_espressobin
    hardware_v8a_rock3a
+   hardware_v8a_tqma93xxca
 
 
 rpi1 Platform
