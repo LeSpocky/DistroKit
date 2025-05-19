@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2025.03.0
+# PTXdist 2025.05.0
 #
 
 #
@@ -80,7 +80,7 @@ PTXCONF_VIRTUAL=y
 PTXCONF_VIRTUAL_HOST_TOOLS=y
 PTXCONF_VIRTUAL_CROSS_TOOLS=y
 PTXCONF_VIRTUAL_AUTOGEN_TOOLS=y
-PTXCONF_CONFIGFILE_VERSION="2025.03.0"
+PTXCONF_CONFIGFILE_VERSION="2025.05.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -1647,6 +1647,7 @@ PTXCONF_UTIL_LINUX_LSBLK=y
 # PTXCONF_UTIL_LINUX_MCOOKIE is not set
 # PTXCONF_UTIL_LINUX_UUIDD is not set
 # PTXCONF_UTIL_LINUX_UUIDGEN is not set
+# PTXCONF_UTIL_LINUX_WAITPID is not set
 # PTXCONF_UTIL_LINUX_WIPEFS is not set
 
 #
@@ -1707,6 +1708,10 @@ PTXCONF_UTIL_LINUX_AGETTY=y
 # text-utils
 #
 # PTXCONF_UTIL_LINUX_COLUMN is not set
+
+#
+# BusyBox' hexdump is selected!
+#
 # PTXCONF_UTIL_LINUX_LINE is not set
 
 #
@@ -1796,6 +1801,7 @@ PTXCONF_ZSTD=y
 # PTXCONF_PYTHON3_PYBIND11 is not set
 # PTXCONF_PYTHON3_PYCPARSER is not set
 # PTXCONF_PYTHON3_PYCRYPTODOMEX is not set
+# PTXCONF_PYTHON3_PYMODBUS is not set
 # PTXCONF_PYTHON3_PYOPENSSL is not set
 # PTXCONF_PYTHON3_PYPARSING is not set
 # PTXCONF_PYTHON3_PYPERF is not set
@@ -2044,6 +2050,7 @@ PTXCONF_OPENSSL=y
 #
 # BusyBox' logger is selected!
 #
+# PTXCONF_SYSLOGNG is not set
 # PTXCONF_TCPDUMP is not set
 # PTXCONF_TCPREPLAY is not set
 # PTXCONF_URSHD is not set
@@ -2256,6 +2263,7 @@ PTXCONF_LIBCAP=y
 # PTXCONF_LIBEDIT is not set
 PTXCONF_LIBELF=y
 # PTXCONF_LIBELF_XZ is not set
+# PTXCONF_LIBELF_ZSTD is not set
 PTXCONF_LIBELF_LIBDW=y
 # PTXCONF_LIBELF_LIBASM is not set
 # PTXCONF_LIBELF_ELFSUTILS is not set
@@ -2593,6 +2601,7 @@ PTXCONF_DBUS_SYSTEMD_UNIT=y
 # PTXCONF_WPEWEBKIT is not set
 # PTXCONF_XKEYBOARD_CONFIG is not set
 # PTXCONF_ZBAR is not set
+# PTXCONF_ZINT is not set
 # end of libs                          
 
 #
@@ -2645,7 +2654,6 @@ PTXCONF_JSON_GLIB=y
 #
 # pipewire                      
 #
-# PTXCONF_MEDIA_SESSION is not set
 # PTXCONF_PIPEWIRE is not set
 # PTXCONF_WIREPLUMBER is not set
 # end of pipewire                      
@@ -2695,6 +2703,7 @@ PTXCONF_JSON_GLIB=y
 # tools                         
 #
 # PTXCONF_BAYER2RGB3 is not set
+# PTXCONF_DRM_INFO is not set
 # PTXCONF_FONTCONFIG is not set
 # PTXCONF_IGT_GPU_TOOLS is not set
 # PTXCONF_IMAGEMAGICK is not set
