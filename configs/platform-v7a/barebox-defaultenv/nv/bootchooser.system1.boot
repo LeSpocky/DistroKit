@@ -1,1 +1,1 @@
-mmc0.root-B
+bootsource.root-B
