@@ -25,7 +25,7 @@ IMAGE_SAMA5D27_SOM1_EK_CONFIG	:= at91-sd.config
 # ----------------------------------------------------------------------------
 
 IMAGE_SAMA5D27_SOM1_EK_ENV := \
-        FSBL=barebox-sama5d27-som1-ek-xload-mmc.img \
+        FSBL=barebox-sama5d27-som1-ek-xload.img \
         SSBL=barebox-sama5d27-som1-ek.img
 
 $(IMAGE_SAMA5D27_SOM1_EK_IMAGE):

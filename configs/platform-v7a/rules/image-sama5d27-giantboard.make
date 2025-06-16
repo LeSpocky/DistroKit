@@ -25,7 +25,7 @@ IMAGE_SAMA5D27_GIANTBOARD_CONFIG	:= at91-sd.config
 # ----------------------------------------------------------------------------
 
 IMAGE_SAMA5D27_GIANTBOARD_ENV := \
-        FSBL=barebox-groboards-sama5d27-giantboard-xload-mmc.img \
+        FSBL=barebox-groboards-sama5d27-giantboard-xload.img \
         SSBL=barebox-groboards-sama5d27-giantboard.img
 
 $(IMAGE_SAMA5D27_GIANTBOARD_IMAGE):
