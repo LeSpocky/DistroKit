@@ -3,7 +3,7 @@
 config IMAGE_VEXPRESS
 	tristate
 	select HOST_GENIMAGE
-	select BAREBOX_VEXPRESS
+	select BAREBOX
 	select IMAGE_ROOT_EXT
 	prompt "Generate images/vexpress.hdimg"
 	help

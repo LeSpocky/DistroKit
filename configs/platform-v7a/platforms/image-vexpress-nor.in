@@ -3,7 +3,7 @@
 config IMAGE_VEXPRESS_NOR
 	tristate
 	select HOST_GENIMAGE
-	select BAREBOX_VEXPRESS
+	select BAREBOX
 	select KERNEL
 	prompt "Generate images/vexpress.norimg"
 	help
