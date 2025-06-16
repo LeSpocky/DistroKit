@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if of_compatible -k arm,vexpress,v2p-ca9; then
+if of_compatible -k arm,vexpress,v2p-ca9 || of_compatible -k raspberrypi,3-model-b; then
 	realbootsource="disk0";
 fi
 
