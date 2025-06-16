@@ -5,7 +5,7 @@ config IMAGE_LXA_MC1_SCMI
 	select HOST_GENIMAGE
 	select HOST_TF_A
 	select IMAGE_ROOT_EXT
-	select BAREBOX_STM32MP
+	select BAREBOX
 	select TF_A
 	prompt "Generate images/lxa-mc1-scmi.hdimg"
 	help

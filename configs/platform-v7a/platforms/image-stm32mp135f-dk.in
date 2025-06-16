@@ -7,7 +7,7 @@ config IMAGE_STM32MP135F_DK
 	select IMAGE_ROOT_EXT
 	select TF_A_STM32MP13
 	select OPTEE
-	select BAREBOX_STM32MP
+	select BAREBOX
 	prompt "Generate images/stm32mp135f-dk.hdimg"
 	help
 	  Generate GPT image for the STM32MP135F-DK
