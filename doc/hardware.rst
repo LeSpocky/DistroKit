@@ -91,6 +91,72 @@ listed above, here is a short overview of the generic way:
 
 Refer to the :ref:`ptx_dev_manual` for a more thorough documentation.
 
+Fast Development via fastboot
+-----------------------------
+
+For development, the v7a bootloaders are set-up to support :ref:`fast_development`
+out of the box.
+Currently this is supported on all v7a boards except AT91 and AM33xx platforms.
+
+The actual partition names might differ between boards.
+To get a list of exported partitions, connect the USB OTG connector on the
+board, and run on your development host::
+
+   $ fastboot getvar all
+   (bootloader) version: 0.4
+   (bootloader) bootloader-version: barebox-2023.02.1
+   (bootloader) max-download-size: 8388608
+   (bootloader) partition-size:mmc1: 00000000
+   (bootloader) partition-type:mmc1: unavailable
+   (bootloader) partition-size:mmc2: 00000000
+   (bootloader) partition-type:mmc2: unavailable
+   (bootloader) partition-size:mmc3: e5000000
+   (bootloader) partition-type:mmc3: basic
+   (bootloader) partition-size:ram-kernel: 00000000
+   (bootloader) partition-type:ram-kernel: file
+   (bootloader) partition-size:ram-initramfs: 00000000
+   (bootloader) partition-type:ram-initramfs: file
+   (bootloader) partition-size:ram-oftree: 00000000
+   (bootloader) partition-type:ram-oftree: file
+   (bootloader) partition-size:bbu-emmc: 000e0000
+   (bootloader) partition-type:bbu-emmc: basic
+
+In this example, the exported partition names are *mmc1*, *mmc2*, *mmc3*,
+*ram-kernel*, *ram-initramfs*, *ram-oftree* and *bbu-emmc*.
+In this example two of the SD cards (*mmc1* and *mmc2*) are not plugged in (i.e.
+"unavailable").
+Note that the entries starting with *ram-* refer to files in RAM instead of
+persistent storage.
+
+.. note:: You need to restart the fastboot usbgadget in barebox or reset the
+   board if you swap the SD cards later on.
+
+You can write images to the exported fastboot partitions by running the
+``fastboot flash`` command on your development host::
+
+   $ fastboot flash ram-kernel platform-v7a/images/linuximage
+   $ fastboot flash ram-oftree platform-v7a/images/imx6dl-riotboard.dtb
+   $ fastboot flash ram-initramfs platform-v7a/images/root.cpio.gz
+
+(The Device Tree here is exemplary for the RIoT-Board; use the respective DTB
+for your board instead.)
+
+Then instruct barebox to boot from the *ram-fastboot* boot target::
+
+   $ fastboot oem exec -- boot ram-fastboot
+
+You can populate persistent memory like the eMMC as well. But only a whole
+memory device can be written, no single partitions, so your image has to
+include a partition table if needed::
+
+   $ fastboot flash mmc1 platform-v7a/images/riotboard.hdimg
+
+The mapping of *mmc1*, *mmc2* and *mmc3* depends on the board; see the
+documentation for each board above.
+
+.. note:: If you have no USB connection to your board, you can use
+          a network connection instead. Run all the 'fastboot' commands
+          shown above with the additional option '-s udp:<board IP address>'.
 
 v7a_noneon Platform
 -------------------

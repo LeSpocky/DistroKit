@@ -26,12 +26,12 @@ Since we want to use an initramfs as the kernel's root filesystem, we
 have some requirements to the target system's free memory. The bootloader
 keeps up to 512 MiB of memory to add files to its own RAM disk. The
 512 MiB is valid for a physical memory size of 1 GiB and above. With less
-physical memory it is always 50 % of the available physical memory.
+physical memory it is always 50% of the available physical memory.
 Keep an eye on the size of the initramfs file if it fits onto the
 bootloader's RAM disk. Reduce its size on demand.
 
-Note: the 50 % rule is only valid for the time the bootloader runs. After
-      starting the Linux kernel, 100 % of the physical memory is available.
+Note: the 50% rule is only valid for the time the bootloader runs. After
+      starting the Linux kernel, 100% of the physical memory is available.
 
 Some settings are required to make it work smoothly.
 
@@ -98,7 +98,7 @@ to '/sbin/init via:
 Optimisation
 ------------
 
-Some BPS settings do not make sense regarding used in an initramfs instead
+Some BSP settings do not make sense regarding used in an initramfs instead
 of a persistent target system local memory. For development or testing some
 settings should be changed, to reduce the file sizes and boot time.
 
