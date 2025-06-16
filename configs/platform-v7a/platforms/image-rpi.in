@@ -1,6 +1,6 @@
 ## SECTION=image
 
-config IMAGE_RPI2
+config IMAGE_RPI
 	tristate
 	select HOST_GENIMAGE
 	select HOST_DOSFSTOOLS
