@@ -40,6 +40,27 @@
 
 #endif
 
+/** BeagleBoard BeaglePlay with TI Sitara AM625 *******************************/
+#ifdef k3_am625_beagleplay_dts
+/ {
+	aliases {
+		state = &state_emmc;
+	};
+
+	state_emmc: state {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "barebox,state";
+		magic = <0x444f1d39>;
+		backend = <&sdhci1>;   // via GPT Type UUID
+		backend-type = "raw";
+		backend-storage-type = "direct";
+		backend-stridesize = <0x40>;
+	};
+};
+
+#endif
+
 /** TQ-Systems i.MX93 TQMa93xxLA/TQMa93xxCA on MBa93xxCA starter kit **********/
 #ifdef imx93_tqma9352_mba93xxca_dts
 / {
@@ -111,4 +132,3 @@
 		type = "uint32";
 	};
 };
-
