@@ -1,5 +1,5 @@
 ifdef PTXCONF_TF_A
-ifneq ($(filter k3,$(call remove_quotes, $(PTXCONF_TF_A_PLATFORMS))),)
-BAREBOX_INJECT_FILES	+= k3-bl31.bin:firmware/k3-bl31.bin
-endif
+# currently k3, imx8(mq/mm/mn/mp), imx93
+BAREBOX_INJECT_FILES	+= $(foreach plat,$(TF_A_PLATFORMS), \
+	$(plat)-bl31.bin:firmware/$(plat)-bl31.bin)
 endif
