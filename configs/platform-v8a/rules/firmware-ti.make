@@ -34,7 +34,7 @@ FIRMWARE_TI_FIRMWARE_FILES	:= \
 #
 ifdef PTXCONF_FIRMWARE_TI
 BAREBOX_R5_INJECT_FILES		+= \
-	$(foreach f,$(FIRMWARE_TI_FIRMWARE_FILES),ti-sysfw/$(f):firmware/$(f))
+	$(foreach f,$(FIRMWARE_TI_FIRMWARE_FILES),ti-sysfw/$(f):firmware/ti-linux-firmware/ti-sysfw/$(f))
 endif
 
 # ----------------------------------------------------------------------------
