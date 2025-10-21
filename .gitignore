@@ -4,7 +4,7 @@
 /selected_collectionconfig
 /selected_platformconfig
 /selected_ptxconfig
-/selected_toolchain
+/selected_toolchain*
 /p
 /src
 *.sw*
