@@ -82,6 +82,27 @@
 
 #endif
 
+/** NXP i.MX93 FRDM board *****************************************************/
+#ifdef imx93_frdm_dts
+/ {
+	aliases {
+		state = &state_sd;
+	};
+
+	state_sd: state {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "barebox,state";
+		magic = <0x81ffac43>;
+		backend = <&usdhc2>;   // uSD card slot
+		backend-type = "raw";
+		backend-storage-type = "direct";
+		backend-stridesize = <0x40>;
+	};
+};
+
+#endif
+
 /** Generic bootstate node for all platforms **********************************/
 / {
 	state: state {

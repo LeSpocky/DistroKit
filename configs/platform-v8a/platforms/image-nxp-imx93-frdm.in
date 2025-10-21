@@ -1,0 +1,10 @@
+## SECTION=image
+
+config IMAGE_NXP_IMX93_FRDM
+	tristate
+	select HOST_GENIMAGE
+	select IMAGE_ROOT_EXT
+	select BAREBOX
+	prompt "Generate images/nxp-imx93-frdm.img"
+	help
+	  Generate a bootable SD card image to deploy on a NXP i.MX93 FRDM board.

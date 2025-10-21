@@ -137,7 +137,7 @@ PTXCONF_KERNEL_IMAGE_RAW=y
 PTXCONF_KERNEL_IMAGE="Image"
 PTXCONF_KERNEL_DTB=y
 PTXCONF_KERNEL_DTS_PATH="${PTXDIST_PLATFORMCONFIG_SUBDIR}/dts:${KERNEL_DIR}/arch/${GENERIC_KERNEL_ARCH}/boot/dts"
-PTXCONF_KERNEL_DTS="armada-3720-community.dts freescale/imx8mm-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mp-evk.dts freescale/imx8mq-evk.dts rockchip/rk3568-rock-3a.dts freescale/imx8mp-tqma8mpql-mba8mpxl.dts freescale/imx93-tqma9352-mba93xxca.dts ti/k3-am625-beagleplay.dts"
+PTXCONF_KERNEL_DTS="armada-3720-community.dts freescale/imx8mm-evk.dts freescale/imx8mn-ddr4-evk.dts freescale/imx8mp-evk.dts freescale/imx8mq-evk.dts rockchip/rk3568-rock-3a.dts freescale/imx8mp-tqma8mpql-mba8mpxl.dts freescale/imx93-tqma9352-mba93xxca.dts ti/k3-am625-beagleplay.dts imx93-11x11-frdm.dts"
 # PTXCONF_KERNEL_DTBO is not set
 # PTXCONF_KERNEL_CODE_SIGNING is not set
 # PTXCONF_KERNEL_ZSTD is not set
@@ -265,6 +265,7 @@ PTXCONF_IMAGE_KERNEL_INSTALL_EARLY=y
 # PTXCONF_IMAGE_KERNEL_LZOP is not set
 # end of Generate images/linuximage    
 
+PTXCONF_IMAGE_NXP_IMX93_FRDM=y
 PTXCONF_IMAGE_RAUC=y
 PTXCONF_IMAGE_RAUC_BUNDLE_VERSION="${PTXDIST_BSP_AUTOVERSION}"
 PTXCONF_IMAGE_RAUC_DESCRIPTION="${PTXCONF_PROJECT_VENDOR} ${PTXCONF_PROJECT}"

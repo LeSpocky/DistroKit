@@ -10,7 +10,7 @@ if [ "$bootsource" = mmc ]; then
 	global.boot.default="mmc$bootsource_instance net"
 fi
 
-if of_compatible -k radxa,rock3a tq,imx8mp-tqma8mpql-mba8mpxl tq,imx93-tqma9352 beagle,am625-beagleplay; then
+if of_compatible -k radxa,rock3a tq,imx8mp-tqma8mpql-mba8mpxl tq,imx93-tqma9352 beagle,am625-beagleplay fsl,imx93-11x11-frdm; then
 	global.boot.default="bootchooser net"
 	global bootchooser.state_prefix="state.bootstate"
 	global bootchooser.targets="system0 system1"
