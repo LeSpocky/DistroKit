@@ -3,14 +3,18 @@
 # version symlinked to ./p
 case "${JOB_BASE_NAME}" in
 	*v8a*)
-		[ -e selected_toolchain_r5 ] || {
+		if [ ! -e selected_toolchain_r5 ]; then
 			# store away the currently selected toolchain
-			[ -e selected_toolchain ] && mv selected_toolchain selected_toolchain_ci_backup
+			if [ -e selected_toolchain ]; then
+				mv selected_toolchain selected_toolchain_ci_backup
+			fi
 			# create toolchain based on v7a platform, which is needed for R5 processor.
 			./p toolchain --platformconfig=configs/platform-v7a/platformconfig
 			mv selected_toolchain selected_toolchain_r5
 			# restore the selected toolchain, if there was one before
-			[ -e selected_toolchain_ci_backup ] && mv selected_toolchain_ci_backup selected_toolchain
-		}
+			if [ -e selected_toolchain_ci_backup ]; then
+				mv selected_toolchain_ci_backup selected_toolchain
+			fi
+		fi
 		;;
 esac
