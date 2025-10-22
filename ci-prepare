@@ -1,14 +1,14 @@
 #!/bin/sh
 case "${JOB_BASE_NAME}" in
-       *v8a*)
-                [ -e selected_toolchain_r5 ] || {
-                        # store away the currently selected toolchain
-                        [ -e selected_toolchain ] && mv selected_toolchain selected_toolchain_ci_backup
-                        # create toolchain based on v7a platform, which is needed for R5 processor.
-                        ptxdist toolchain --platformconfig=configs/platform-v7a/platformconfig
-                        mv selected_toolchain selected_toolchain_r5
-                        # restore the selected toolchain, if there was one before
-                        [ -e selected_toolchain_ci_backup ] && mv selected_toolchain_ci_backup selected_toolchain
-                }
-               ;;
+	*v8a*)
+		[ -e selected_toolchain_r5 ] || {
+			# store away the currently selected toolchain
+			[ -e selected_toolchain ] && mv selected_toolchain selected_toolchain_ci_backup
+			# create toolchain based on v7a platform, which is needed for R5 processor.
+			ptxdist toolchain --platformconfig=configs/platform-v7a/platformconfig
+			mv selected_toolchain selected_toolchain_r5
+			# restore the selected toolchain, if there was one before
+			[ -e selected_toolchain_ci_backup ] && mv selected_toolchain_ci_backup selected_toolchain
+		}
+		;;
 esac
