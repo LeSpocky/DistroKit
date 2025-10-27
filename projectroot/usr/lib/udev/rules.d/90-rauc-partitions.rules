@@ -19,6 +19,7 @@ ENV{OF_BASE_COMPATIBLE}=="*radxa,rock3a*", ENV{ID_PATH}=="platform-fe2b0000.mmc"
 ENV{OF_BASE_COMPATIBLE}=="*tq,imx8mp-tqma8mpql-mba8mpxl*", ENV{ID_PATH}=="platform-30b50000.mmc", TAG+="boot_disk"
 ENV{OF_BASE_COMPATIBLE}=="*tq,imx93-tqma9352-mba93xxca*", ENV{ID_PATH}=="platform-42860000.mmc", TAG+="boot_disk"
 ENV{OF_BASE_COMPATIBLE}=="*fsl,imx93-11x11-frdm*", ENV{ID_PATH}=="platform-42860000.mmc", TAG+="boot_disk"
+ENV{OF_BASE_COMPATIBLE}=="*beagle,am625-beagleplay*", ENV{ID_PATH}=="platform-fa00000.mmc", TAG+="boot_disk"       
 
 # second part: create /dev/disk/by-usage/ symlinks
 ENV{DEVTYPE}!="partition", GOTO="rauc_partitions_end"
