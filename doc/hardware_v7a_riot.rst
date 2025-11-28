@@ -1,6 +1,11 @@
 RIoT-Board
 ================
 
+Maintenance Status
+------------------
+This board is available at PTX (labgrid place name ``distrokit-riotboard``)
+and automated boot tests are run for the *master* and *next* branches.
+
 Boot Media
 ----------
 Use the image ``platform-v7a/images/riotboard.hdimg`` and write it to your SD card.

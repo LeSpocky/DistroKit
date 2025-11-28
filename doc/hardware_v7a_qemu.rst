@@ -11,3 +11,7 @@ There are two ways to run DistroKit inside qemu:
 * Without barebox:
   Run ``./configs/platform-v7a/run`` to directly start the kernel without barebox.
 
+Maintenance Status
+------------------
+Automated boot tests for the qemu machine are run at PTX for the *master* and
+*next* branches.

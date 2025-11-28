@@ -1,6 +1,11 @@
 Radxa Rock 3 Model A
 ====================
 
+Maintenance Status
+------------------
+This board is available at PTX (labgrid place name ``distrokit-rock3a``)
+and automated boot tests are run for the *master* and *next* branches.
+
 Boot Media
 ----------
 
