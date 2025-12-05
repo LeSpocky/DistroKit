@@ -3,6 +3,7 @@
 config BAREBOX_R5
 	tristate
 	prompt "Barebox (r5)"
+	select BAREBOX			if BUILDTIME
 	select HOST_SYSTEM_PYTHON3
 	select HOST_SYSTEM_PYTHON3_PYYAML
 	select FIRMWARE_TI
