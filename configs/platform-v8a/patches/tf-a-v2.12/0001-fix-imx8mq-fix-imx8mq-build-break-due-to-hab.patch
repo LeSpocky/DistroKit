@@ -1,7 +1,6 @@
-From 3a36f70ba02e88ed20083c1278a739c6c870aae0 Mon Sep 17 00:00:00 2001
 From: Jacky Bai <ping.bai@nxp.com>
 Date: Tue, 14 Jan 2020 16:05:59 +0800
-Subject: [PATCH 1/2] fix(imx8mq): fix imx8mq build break due to hab
+Subject: [PATCH] fix(imx8mq): fix imx8mq build break due to hab
 
 Add the HAB secure boot support for the i.MX8MQ to
 fix the build break.
@@ -78,6 +77,3 @@ index 73179dd0c13e..d3d213268ce1 100644
  				plat/imx/imx8m/imx_aipstz.c			\
  				plat/imx/imx8m/imx8m_caam.c			\
  				plat/imx/imx8m/imx8m_ccm.c			\
--- 
-2.39.5
-
