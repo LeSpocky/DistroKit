@@ -40,7 +40,6 @@ TF_A_STM32MP13_ARTIFACTS		:= tf-a-*.stm32 fdts/*-fw-config.dtb
 TF_A_STM32MP13_WRAPPER_BLACKLIST	:= \
 	$(PTXDIST_LOWLEVEL_WRAPPER_BLACKLIST)
 
-TF_A_STM32MP13_PATH	:= PATH=$(CROSS_PATH)
 TF_A_STM32MP13_MAKE_OPT	:= \
 	-C $(TF_A_STM32MP13_DIR) \
 	CROSS_COMPILE=$(BOOTLOADER_CROSS_COMPILE) \
@@ -74,17 +73,17 @@ $(STATEDIR)/tf-a-stm32mp13.compile:
 # Install
 # ----------------------------------------------------------------------------
 
+TF_A_STM32MP13_BINDIR	= $(TF_A_STM32MP13_BUILD_DIR)/$(1)/$(if $(filter DEBUG=1,$(TF_A_STM32MP13_MAKE_OPT)),debug,release)
+
 tf-a-stm32mp13/inst_plat = $(foreach artifact, \
 	$(foreach pattern, $(TF_A_STM32MP13_ARTIFACTS), \
-	$(wildcard $(TF_A_STM32MP13_BUILD_DIR)/$(1)/$(if $(filter DEBUG=1,TF_A_STM32MP13_MAKE_OPT),debug,release)/$(pattern))), \
+	$(wildcard $(addprefix $(TF_A_STM32MP13_BINDIR)/, $(pattern)))), \
 	install -v -D -m 644 $(artifact) \
-		$(2)/$(1)-$(notdir $(artifact))$(ptx/nl))
-
-tf-a-stm32mp13/inst_bins = $(foreach plat, $(TF_A_STM32MP13_PLATFORMS), $(call tf-a-stm32mp13/inst_plat,$(plat),$(1)))
+		$(TF_A_STM32MP13_PKGDIR)/usr/lib/firmware/$(1)-$(notdir $(artifact))$(ptx/nl))
 
 $(STATEDIR)/tf-a-stm32mp13.install:
 	@$(call targetinfo)
-	@$(call tf-a-stm32mp13/inst_bins,$(TF_A_STM32MP13_PKGDIR)/usr/lib/firmware)
+	@$(foreach plat, $(TF_A_STM32MP13_PLATFORMS), $(call tf-a-stm32mp13/inst_plat,$(plat),$(1)))
 	@$(call touch)
 
 # ----------------------------------------------------------------------------
@@ -93,16 +92,8 @@ $(STATEDIR)/tf-a-stm32mp13.install:
 
 $(STATEDIR)/tf-a-stm32mp13.targetinstall:
 	@$(call targetinfo)
-	@$(call tf-a-stm32mp13/inst_bins,$(IMAGEDIR))
+	@$(foreach artifact, $(wildcard $(TF_A_STM32MP13_PKGDIR)/usr/lib/firmware/*), \
+		$(call ptx/image-install, TF_A_STM32MP13, $(artifact))$(ptx/nl))
 	@$(call touch)
-
-# ----------------------------------------------------------------------------
-# Clean
-# ----------------------------------------------------------------------------
-
-$(STATEDIR)/tf-a-stm32mp13.clean:
-	@$(call targetinfo)
-	@rm -vf $(addprefix $(IMAGEDIR)/, $(notdir $(TF_A_STM32MP13_ARTIFACTS_SRC)))
-	@$(call clean_pkg, TF_A_STM32MP13)
 
 # vim: syntax=make
